@@ -25,5 +25,5 @@ app.post("/posts", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("Post service listening in port 4000");
+  console.log("Post service listening on port 4000");
 });
