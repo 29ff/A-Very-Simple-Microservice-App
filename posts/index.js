@@ -24,7 +24,7 @@ app.post("/posts", async (req, res) => {
     title,
   };
 
-  await axios.post("http://localhost:4005/events", {
+  await axios.post("http://eventbus-clusterip-srv:4005/events", {
     type: "PostCreated",
     data: {
       id,
@@ -42,6 +42,5 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("Updated version 0.0.3");
   console.log("Post service listening on port 4000");
 });
