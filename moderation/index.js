@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/events", async (req, res) => {
+app.post("/moderation/events", async (req, res) => {
   const { type, data } = req.body;
   console.log("Event Received: ", type);
 
